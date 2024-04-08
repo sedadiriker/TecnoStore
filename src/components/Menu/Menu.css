@@ -1,0 +1,15 @@
+.navbar {
+  background-color: rgb(64, 64, 90);
+  .image {
+    width: 130px;
+    border-radius: 45px;
+    box-shadow: 2px 3px 20px rgb(153, 149, 149);
+  }
+  .offcanvas-show .nav.text-decoration-none {
+    color: black !important;
+  }
+
+  .nav.text-decoration-none {
+    color: white !important;
+  }
+}
