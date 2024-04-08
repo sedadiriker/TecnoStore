@@ -1,9 +1,9 @@
-
+import "./Footer.css"
 const Footer = () => {
   return (
-    <div>
-      
-    </div>
+    <footer>
+      <p>© CopyRight 2024 | SedaDiriker</p>
+    </footer>
   )
 }
 

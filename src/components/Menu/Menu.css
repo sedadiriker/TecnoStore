@@ -1,15 +1,23 @@
 .navbar {
-  background-color: rgb(64, 64, 90);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
   .image {
-    width: 130px;
+    width: 110px;
     border-radius: 45px;
     box-shadow: 2px 3px 20px rgb(153, 149, 149);
   }
   .offcanvas-show .nav.text-decoration-none {
-    color: black !important;
+    color: black ;
   }
 
-  .nav.text-decoration-none {
-    color: white !important;
+  .nav{
+    color: white ;
   }
+  
+}
+.nav.active{
+  color: rgb(130, 4, 4);
 }

@@ -1,7 +1,7 @@
-
-const TecnoProductList = () => {
+import "./TecnoProductList.css"
+const TecnoProductList = ({products,getProducts}) => {
   return (
-    <div>
+    <div className="product-list">
       
     </div>
   )

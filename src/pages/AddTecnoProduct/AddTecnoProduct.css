@@ -1,0 +1,66 @@
+.add-product{
+    
+    min-height: 100vh;
+    background-color: #0D2235;
+    padding-top: 13rem;
+}
+
+.product-name, .product-price, .product-quantity, .product-image {
+    text-align: center;
+    position: relative;
+  }
+  
+  .product-name input,.product-price input, .product-quantity input, .product-image input {
+    font-size: 1rem;
+    width: 70%;
+    margin: auto;
+    border: 0;
+    border-bottom: 3px solid brown;
+    outline: none;
+    padding: 7px;
+  }
+  
+  .product-name label,.product-price label, .product-quantity label, .product-image label {
+    position: absolute;
+    top: 0;
+    left: 18%;
+    font-size: 1.5rem;
+    color:black;
+    transition: all 0.2s ease;
+  }
+  .product-name input:not(:placeholder-shown) + label,
+  .product-price input:not(:placeholder-shown) + label,
+  .product-quantity input:not(:placeholder-shown) + label,
+.product-name input:focus + label ,
+.product-price input:focus + label ,
+.product-quantity input:focus + label,.product-image  label {
+  top: -35px;
+  font-size: 1.5rem;
+  color: #972405;
+}
+
+.product-image {
+    display: flex;
+    align-items: center;
+    position: relative;
+    input{
+        padding: 7px 14rem;
+    }
+  }
+  
+  .product-image .prefix {
+    background-color: gray;
+    position: absolute;
+    left: 14%;
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    color: black;
+    margin-left: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid brown;
+  }
+  
+
+  
