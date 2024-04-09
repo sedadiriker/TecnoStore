@@ -1,5 +1,6 @@
 .navbar {
   position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -21,3 +22,28 @@
 .nav.active{
   color: rgb(130, 4, 4);
 }
+
+.navbar-changeColor{
+  background-color: rgba(153, 217, 240, 0.292);
+  .scroll-nav{
+    background-color: #1B3354;
+    color: white ;
+    padding: 6px;
+    border-radius: 10px;
+  }
+  .scroll-nav.active{
+    color: rgb(130, 4, 4);
+  }
+}
+.navbar-toggler-icon svg {
+  fill: #ffffff; 
+}
+
+
+@media screen and (max-width:480px) {
+  .navbar{
+    .image{
+      width: 80px;
+    }
+  }
+  }

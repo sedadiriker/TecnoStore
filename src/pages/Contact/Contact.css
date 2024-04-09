@@ -1,4 +1,14 @@
 .contact{
     min-height: 100vh;
     background-color: #1E4571;
+    padding-top: 10rem;
 }
+
+.icon:hover{
+    background-color: #1E4571 !important;
+    color: white;
+    transform: scale(1.3);
+}
+.contact-footer {
+    color: black; /* This will only apply to the Footer within the Contact page */
+  }

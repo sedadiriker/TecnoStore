@@ -3,6 +3,7 @@
     min-height: 100vh;
     background-color: #0D2235;
     padding-top: 13rem;
+    padding-bottom: 3rem;
 }
 
 .product-name, .product-price, .product-quantity, .product-image {
@@ -62,5 +63,64 @@
     border-bottom: 3px solid brown;
   }
   
-
+@media screen and (max-width:1000px) {
+  .product-name input,.product-price input, .product-quantity input, .product-image input{
+    width: 80% ;
+  }
+  .product-image .prefix {
+    left: 9%;
+  }
+}
+@media screen and (max-width:780px) {
+  .add-btn{
+    width: 50% !important;
+  }
+  .product-name input,.product-price input, .product-quantity input, .product-image input{
+    width: 90% ;
+    
+  }
+  .product-image .prefix {
+    left: 3%;
+  }
+  .product-name input:not(:placeholder-shown) + label,
+  .product-price input:not(:placeholder-shown) + label,
+  .product-quantity input:not(:placeholder-shown) + label,
+.product-name input:focus + label ,
+.product-price input:focus + label ,
+.product-quantity input:focus + label,.product-name label,.product-price label, .product-quantity label, .product-image label {
+  font-size: 1.3rem;
+}
+}
+@media screen and (max-width:600px) {
+  .product-name input,.product-price input, .product-quantity input, .product-image input{
+    width: 100% ;
+    
+  }
+  .product-image .prefix {
+    left: -2%;
+    font-size: 1rem;
+  }
+  .product-name label,.product-price label, .product-quantity label, .product-image label{
+    left:10%
+  }
+}
+@media screen and (max-width:540px) {
+ 
+  .product-image .prefix {
+    left: -2%;
+    font-size: 12px;
+  }
+  .product-name label,.product-price label, .product-quantity label, .product-image label{
+    left:7%
+  }
+  .product-image {
+    display: flex;
+    align-items: center;
+    position: relative;
+    input{
+        padding: 7px 7rem;
+    }
+  }
+  
+}
   

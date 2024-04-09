@@ -5,12 +5,19 @@ import AddTecnoProduct from "./pages/AddTecnoProduct/AddTecnoProduct";
 import Contact from "./pages/Contact/Contact";
 import TecnoProductList from "./pages/TecnoProductList/TecnoProductList";
 import Menu from "./components/Menu/Menu";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import axios from "axios";
 function App() {
 
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState(
+    ()=> {
+    const savedProducts = localStorage.getItem("products")
+
+    return savedProducts? JSON.parse(savedProducts) : []
+  }
+  )
 // console.log(products)
+
   const getProducts = async () => {
     const URL = "https://66140aa62fc47b4cf27b7326.mockapi.io/Tecno-products"
 
@@ -24,6 +31,14 @@ function App() {
       console.log(err)
     }
   }
+useEffect(()=> {
+  localStorage.setItem("products", JSON.stringify(products))
+})
+
+
+  useEffect(() => {
+    getProducts()
+  }, [])
   return (
     <div className="App">
       <BrowserRouter>

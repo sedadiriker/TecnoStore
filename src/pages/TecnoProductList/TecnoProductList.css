@@ -1,4 +1,37 @@
 .product-list{
     background-color: #1B3455;
     min-height: 100vh;
+    padding-top: 13rem;
+    padding-bottom: 3rem;
+}
+
+@media screen and (max-width:900px) {
+    .card{
+        width: 40rem !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .card{
+        width: 25rem !important;
+    }
+    .total{
+        width: 80% !important;
+    }
+}
+@media screen and (max-width:550px) {
+    .card{
+        width: 22rem !important;
+    }
+    .total{
+        width: 90% !important;
+    }
+}
+@media screen and (max-width:320px) {
+    .card{
+        width: 18rem !important;
+    }
+    .total{
+        width: 100% !important;
+    }
 }

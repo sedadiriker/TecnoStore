@@ -1,7 +1,10 @@
 import "./AddTecnoProduct.css";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 const AddTecnoProduct = ({getProducts}) => {
+  const navigate = useNavigate()
   const [product, setProduct] = useState({
     name: "",
     price: "",
@@ -24,6 +27,7 @@ const AddTecnoProduct = ({getProducts}) => {
       quantity: "",
       image: "",
     });
+    
   };
 
   const postProduct = async (product) =>  {
@@ -31,10 +35,11 @@ const AddTecnoProduct = ({getProducts}) => {
     try{
 
       await axios.post(URL, product)
+      getProducts()
+      navigate("/tecnoProductList")
     }catch(err) {
       console.log(err)
     }
-    getProducts()
   }
   return (
     <form
@@ -89,7 +94,7 @@ const AddTecnoProduct = ({getProducts}) => {
         />
         <label htmlFor="image">Product Image</label>
       </div>
-      <button className="btn text-white w-25 btn-success mx-auto">
+      <button className="btn text-white w-25 btn-success mx-auto add-btn">
         Add Product
       </button>
     </form>
