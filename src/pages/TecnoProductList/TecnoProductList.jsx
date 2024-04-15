@@ -29,7 +29,7 @@ useEffect(() => {
   setSubTotal(total - (total * 0.18));
 }, [products, quantity]); 
 // console.log(subTotal)
-const tax = (subTotal + (subTotal * 0.18)) * taxRate;
+const tax = ((subTotal * 100) / 82) * 0.18
 const total = subTotal + tax + shipping/1000;
 
 
@@ -127,7 +127,7 @@ const total = subTotal + tax + shipping/1000;
                   {`${(
                     product.quantity * (product.price * 0.8).toFixed(2)
                   ).toFixed(3)}`}{" "}
-                  TL
+                  $
                 </p>
               </Card.Body>
             </Col>
@@ -138,22 +138,22 @@ const total = subTotal + tax + shipping/1000;
 <div className="total text-white text-center w-50 mx-auto mt-4 fs-4">
         <div className="d-flex justify-content-between px-5">
           <span>SubTotal</span>
-          <span>{`${subTotal.toFixed(3)} TL`}</span>
+          <span>{`${subTotal.toFixed(3)} $`}</span>
         </div>
         <hr />
         <div className="d-flex justify-content-between px-5">
           <span>Tax (18%)</span>
-          <span>{`${tax.toFixed(3)} TL`}</span>
+          <span>{`${tax.toFixed(3)} $`}</span>
         </div>
         <hr />
         <div className="d-flex justify-content-between px-5">
           <span>Shipping</span>
-          <span>{`${shipping} TL`}</span>
+          <span>{`${shipping} $`}</span>
         </div>
         <hr />
         <div className="d-flex justify-content-between px-5">
           <span>TOTAL</span>
-          <span className="text-danger">{`${total.toFixed(3)} TL`}</span>
+          <span className="text-danger">{`${total.toFixed(3)} $`}</span>
         </div>
         <hr />
       </div>
